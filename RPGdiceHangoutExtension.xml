@@ -40,14 +40,29 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/rpgdice/RPGdiceHangoutExtension.css" />
 	</head>
 	<body>
-		<h3>Simple Hangout App</h3>
-		<p>
-			<input class="button" type="button" value="Show participants!" id="showParticipants" style="visibility:hidden;"
-				onClick="showParticipants()"/>
-		</p>
-		<div id="participantsDiv"></div>
-		<hr>
-		<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
+		<ul id="tabs" class="nav nav-tabs">
+			<li class="active"><a href="#first" data-toggle="tab">First</a></li>
+			<li><a href="#second" data-toggle="tab">Second</a></li>
+		</ul>
+		
+		<div id="rpgdice-tab-content" class="tab-content">
+		
+			<div id="first" class="tab-pane active fade in">
+				<h3>Simple Hangout App</h3>
+				<p>
+					<input class="button" type="button" value="Show participants!" id="showParticipants" style="visibility:hidden;"
+						onClick="showParticipants()"/>
+				</p>
+				<div id="participantsDiv"></div>
+				<hr>
+				<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
+			</div>
+			
+			<div id="second" class="tab-pane fade">
+				<p>Second tab</p>
+			</div>
+		</div>
+
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

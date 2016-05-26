@@ -36,77 +36,65 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	<Content type="html"><![CDATA[     
 
 <html>
-<style type="text/css">
-<!--
-.button {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-  background: -moz-linear-gradient(top, #fff, #ddd);  
-  border: 1px solid #bbb;
-}
+	<head>
+		<link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/rpgdice/RPGdiceHangoutExtension.css" />
+	</head>
+	<body>
 
-.button:active {
-	background: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#333)); 
-	background: -moz-linear-gradient(bottom, #ddd, #aaa); }
+		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 
--->
-</style>
-<body>
+		<h3>Simple Hangout App</h3>
 
-<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+		<p>
+		<input class="button" type="button" value="Show participants!" id="showParticipants" 
+			style="visibility:hidden;"
+			onClick="showParticipants()"/>
+		</p>
 
-<h3>Simple Hangout App</h3>
+		<div id="participantsDiv"></div>
 
-<p>
-<input class="button" type="button" value="Show participants!" id="showParticipants" 
-    style="visibility:hidden;"
-    onClick="showParticipants()"/>
-</p>
+		<hr>
 
-<div id="participantsDiv"></div>
+		<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
 
-<hr>
+		<script>
+		function showParticipants() {
+		  var participants = gapi.hangout.getParticipants();
 
-<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
+		  var retVal = '<p>Participants: </p><ul>';
 
-<script>
-function showParticipants() {
-  var participants = gapi.hangout.getParticipants();
+		  for (var index in participants) {
+			var participant = participants[index];
 
-  var retVal = '<p>Participants: </p><ul>';
+			if (!participant.person) {
+			  retVal += '<li>A participant not running this app</li>';
+			}
+			retVal += '<li>' + participant.person.displayName + '</li>';
+		  }
 
-  for (var index in participants) {
-    var participant = participants[index];
+		  retVal += '</ul>';
 
-    if (!participant.person) {
-      retVal += '<li>A participant not running this app</li>';
-    }
-    retVal += '<li>' + participant.person.displayName + '</li>';
-  }
+		  var div = document.getElementById('participantsDiv');
 
-  retVal += '</ul>';
+		  div.innerHTML = retVal;
+		}
 
-  var div = document.getElementById('participantsDiv');
+		function init() {
+		  // When API is ready...                                                         
+		  gapi.hangout.onApiReady.add(
+			  function(eventObj) {
+				if (eventObj.isApiReady) {
+				  document.getElementById('showParticipants')
+					.style.visibility = 'visible';
+				}
+			  });
+		}
 
-  div.innerHTML = retVal;
-}
-
-function init() {
-  // When API is ready...                                                         
-  gapi.hangout.onApiReady.add(
-      function(eventObj) {
-        if (eventObj.isApiReady) {
-          document.getElementById('showParticipants')
-            .style.visibility = 'visible';
-        }
-      });
-}
-
-// Wait for gadget to load.                                                       
-gadgets.util.registerOnLoadHandler(init);
-</script>
-</body>
+		// Wait for gadget to load.                                                       
+		gadgets.util.registerOnLoadHandler(init);
+		</script>
+	</body>
+</html>
 ]]>
 </Content>
 </Module>

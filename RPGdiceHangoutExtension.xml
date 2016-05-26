@@ -40,27 +40,27 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/rpgdice/RPGdiceHangoutExtension.css" />
 	</head>
 	<body>
-		<ul id="tabs" class="nav nav-tabs">
-			<li class="active"><a href="#roll-pane" data-toggle="tab"><i class="fa fa-cubes"></i> Roll!</a></li>
-			<li><a href="#config-pane" data-toggle="tab"><i class="fa fa-gear"></i> Configure</a></li>
-		</ul>
-		
-		<div id="rpgdice-tab-content" class="tab-content">
-		
-			<div id="roll-pane" class="tab-pane active fade in">
-				<h3>Simple Hangout App</h3>
-				<p>
-					<input class="button" type="button" value="Show participants!" id="showParticipants" style="visibility:hidden;"
-						onClick="showParticipants()"/>
-				</p>
-				<div id="participantsDiv"></div>
-				<hr>
-				<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
-			</div>
+		<div id="rpgdice" class="hidden">
+			<ul id="tabs" class="nav nav-tabs">
+				<li class="active"><a href="#roll-pane" data-toggle="tab"><i class="fa fa-cubes"></i> Roll!</a></li>
+				<li><a href="#config-pane" data-toggle="tab"><i class="fa fa-gear"></i> Configure</a></li>
+			</ul>
 			
-			<div id="config-pane" class="tab-pane fade">
-				<p>Second tab</p>
+			<div id="rpgdice-tab-content" class="tab-content">
+			
+				<div id="roll-pane" class="tab-pane active fade in">
+					<a id="rollBtn" class="btn btn-primary" href="#">Roll the dice!</a>
+					<div id="participantsDiv"></div>
+				</div>
+				
+				<div id="config-pane" class="tab-pane fade">
+					<p>TODO: configuration</p>
+				</div>
 			</div>
+		</div>
+		
+		<div id="api-init-error" class="hidden">
+			<p class="bg-danger">Error initializing Hangouts API</p>
 		</div>
 
 		<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>

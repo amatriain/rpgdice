@@ -1,4 +1,4 @@
-function showParticipants() {
+$("#rollBtn").click(function() {
 	var participants = gapi.hangout.getParticipants();
 	var retVal = '<p>Participants: </p><ul>';
 
@@ -13,13 +13,15 @@ function showParticipants() {
 
 	var div = document.getElementById('participantsDiv');
 	div.innerHTML = retVal;
-}
+});
 
 function init() {
 	// When API is ready...                                                         
 	gapi.hangout.onApiReady.add(function(eventObj) {
 		if (eventObj.isApiReady) {
-			document.getElementById('showParticipants').style.visibility = 'visible';
+			$("#rpgdice").removeClass("hidden");
+		} else{
+			$("#api-init-error").removeClass("hidden");
 		}
 	});
 }

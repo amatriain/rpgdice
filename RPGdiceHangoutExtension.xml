@@ -41,13 +41,13 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	</head>
 	<body>
 		<ul id="tabs" class="nav nav-tabs">
-			<li class="active"><a href="#first" data-toggle="tab">First</a></li>
-			<li><a href="#second" data-toggle="tab">Second</a></li>
+			<li class="active"><a href="#roll-pane" data-toggle="tab"><i class="fa fa-cubes"></i> Roll!</a></li>
+			<li><a href="#config-pane" data-toggle="tab"><i class="fa fa-gear"></i> Configure</a></li>
 		</ul>
 		
 		<div id="rpgdice-tab-content" class="tab-content">
 		
-			<div id="first" class="tab-pane active fade in">
+			<div id="roll-pane" class="tab-pane active fade in">
 				<h3>Simple Hangout App</h3>
 				<p>
 					<input class="button" type="button" value="Show participants!" id="showParticipants" style="visibility:hidden;"
@@ -58,7 +58,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 				<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
 			</div>
 			
-			<div id="second" class="tab-pane fade">
+			<div id="config-pane" class="tab-pane fade">
 				<p>Second tab</p>
 			</div>
 		</div>

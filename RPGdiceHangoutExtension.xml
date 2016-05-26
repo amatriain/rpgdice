@@ -23,10 +23,15 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
-	<ModulePrefs title="RPGdice">
+	<ModulePrefs title="RPGdice"
+			author="Alfredo Amatriain" 
+			author_email="geralt+rpgdice@gmail.com"
+			description="A dice roller extension for Google Hangouts">
 		<Require feature="rpc" />
 		<Require feature="views" />
 		<Require feature="locked-domain" />
+		<Locale lang="en" />
+		<Locale lang="es" />
 	</ModulePrefs>
 	<Content type="html"><![CDATA[     
 

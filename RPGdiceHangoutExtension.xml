@@ -30,8 +30,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<Require feature="rpc" />
 		<Require feature="views" />
 		<Require feature="locked-domain" />
-		<Locale lang="en" />
-		<Locale lang="es" />
 	</ModulePrefs>
 	<Content type="html"><![CDATA[     
 

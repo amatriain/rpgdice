@@ -43,6 +43,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<div id="rpgdice" class="hidden">
 			<ul id="tabs" class="nav nav-tabs">
 				<li class="active"><a href="#roll-pane" data-toggle="tab"><i class="fa fa-cubes"></i> Roll!</a></li>
+				<li><a href="#chat-pane" data-toggle="tab"><i class="fa fa-comment"></i> Chat</a></li>
 				<li><a href="#config-pane" data-toggle="tab"><i class="fa fa-gear"></i> Configure</a></li>
 			</ul>
 			
@@ -51,6 +52,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 				<div id="roll-pane" class="tab-pane active fade in">
 					<a id="rollBtn" class="btn btn-primary" href="#">Roll the dice!</a>
 					<div id="participantsDiv"></div>
+				</div>
+				
+				<div id="chat-pane" class="tab-pane fade">
+					<p>TODO: chat</p>
 				</div>
 				
 				<div id="config-pane" class="tab-pane fade">

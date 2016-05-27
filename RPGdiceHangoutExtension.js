@@ -15,8 +15,6 @@ $("#rollBtn").click(function() {
 	// Place the text x-centered and halfway down the frame
 	arbitraryOverlay.setPosition(0, 0.25);
 	arbitraryOverlay.setVisible(true);
-	
-	alert("finished");
 });
 
 function init() {

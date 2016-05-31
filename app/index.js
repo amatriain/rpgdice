@@ -31,5 +31,7 @@ function init() {
 // Wait for gadget to load.                                                       
 gadgets.util.registerOnLoadHandler(init);
 
+require("./main.css");
+
 var component = require('./component');
 document.getElementById("chat-pane").appendChild(component());

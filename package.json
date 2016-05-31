@@ -1,0 +1,20 @@
+{
+  "name": "rpgdice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "RPGdiceChat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amatriain/rpgdice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amatriain/rpgdice/issues"
+  },
+  "homepage": "https://github.com/amatriain/rpgdice#readme"
+}

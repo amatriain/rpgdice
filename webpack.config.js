@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const validate = require('webpack-validator');
 const PATHS = {
 	app: path.join(__dirname, 'app'), 
@@ -17,6 +18,13 @@ const config = {
 		filename: '[name].js'
 	}, 
 	devtool: 'source-map',
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		})
+	],
 	module: {
 		loaders: [
 			{

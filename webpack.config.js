@@ -17,11 +17,12 @@ const config = {
 	resolve: {
 		extensions: ['', '.js', '.jsx']
 	},
+	devtool: 'source-map',
 	output: {
 		path: PATHS.build, 
-		filename: '[name].js'
+		filename: '[name].[chunkhash].js',
+		chunkFilename: '[chunkhash].js'
 	}, 
-	devtool: 'source-map',
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {

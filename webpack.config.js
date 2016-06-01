@@ -1,24 +1,36 @@
-const path = require("path");
+const path = require('path');
+const validate = require('webpack-validator');
 const PATHS = {
-	app: path.join(__dirname, "app"), 
-	build: path.join(__dirname, "build")
+	app: path.join(__dirname, 'app'), 
+	build: path.join(__dirname, 'build')
 };
 
-module.exports = {
+const config = {
 	entry: {
 		app: PATHS.app
 	}, 
+	resolve: {
+		extensions: ['', '.js', '.jsx']
+	},
 	output: {
 		path: PATHS.build, 
-		filename: "bundle.js"
+		filename: '[name].js'
 	}, 
+	devtool: 'source-map',
 	module: {
 		loaders: [
 			{
 				test: /\.css$/, 
-				loaders: ["style", "css"], 
+				loaders: ['style', 'css'], 
+				include: PATHS.app
+			}, 
+			{
+				test: /\.jsx?$/,
+				loaders: ['babel?cacheDirectory'], 
 				include: PATHS.app
 			}
 		]
 	}
 };
+
+module.exports = validate(config);

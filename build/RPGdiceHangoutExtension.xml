@@ -37,6 +37,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/rpgdice/style.73a9febcacfeff7346be.css" />
 	</head>
 	<body>
 		<div id="rpgdice" class="hidden">
@@ -72,9 +73,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/manifest.591c0c0a73f31443aa34.js"></script>
-		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/vendor.c842a3dde923f27350ad.js"></script>
-		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/app.f6c02a3800c7eca512e2.js"></script>
+		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/manifest.0cafe265c04afdf0af3b.js"></script>
+		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/vendor.880431a78972ea2d69f8.js"></script>
+		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/app.f6ec12570f414dfae683.js"></script>
 	</body>
 </html>
 ]]>

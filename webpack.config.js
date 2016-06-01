@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const validate = require('webpack-validator');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
 	app: path.join(__dirname, 'app'), 
@@ -35,6 +37,14 @@ const config = {
 		new webpack.optimize.CommonsChunkPlugin({
 			names: ['vendor', 'manifest'], 
 			minChunks: Infinity
+		}),
+		new CopyWebpackPlugin(
+			[{
+				from: './app/RPGdiceHangoutExtension.xml'
+			}]
+		), 
+		new CleanWebpackPlugin([PATHS.build], {
+			root: process.cwd()
 		})
 	],
 	module: {

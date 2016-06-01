@@ -4,6 +4,7 @@ const validate = require('webpack-validator');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurifyCSSPlugin = require ('purifycss-webpack-plugin');
 
 const PATHS = {
 	app: path.join(__dirname, 'app'), 
@@ -49,6 +50,10 @@ const config = {
 		), 
 		new CleanWebpackPlugin([PATHS.build], {
 			root: process.cwd()
+		}), 
+		new PurifyCSSPlugin({
+			basePath: process.cwd(),
+			paths: [PATHS.app]
 		})
 	],
 	module: {

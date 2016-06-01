@@ -6,6 +6,10 @@ const PATHS = {
 	build: path.join(__dirname, 'build')
 };
 
+const env = {
+	'process.env.NODE_ENV': JSON.stringify('production')
+};
+
 const config = {
 	entry: {
 		app: PATHS.app
@@ -23,7 +27,8 @@ const config = {
 			compress: {
 				warnings: false
 			}
-		})
+		}), 
+		new webpack.DefinePlugin(env)
 	],
 	module: {
 		loaders: [

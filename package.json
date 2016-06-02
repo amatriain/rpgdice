@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "stats": "webpack --profile --json > stats.json",
+    "test:lint": "eslint app --ext .js --ext .jsx --ignore-path .gitignore --cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/amatriain/rpgdice#readme",
   "devDependencies": {
     "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-syntax-class-properties": "^6.8.0",
@@ -35,6 +37,8 @@
     "clean-webpack-plugin": "^0.1.9",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
+    "eslint": "^2.11.1",
+    "eslint-plugin-react": "^5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "purifycss-webpack-plugin": "^2.0.3",
     "style-loader": "^0.13.1",

@@ -73,7 +73,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/manifest.0cafe265c04afdf0af3b.js"></script>
+		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/manifest.4a90527ae65cb24433b1.js"></script>
 		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/vendor.880431a78972ea2d69f8.js"></script>
 		<script src="https://s3-eu-west-1.amazonaws.com/rpgdice/app.f6ec12570f414dfae683.js"></script>
 	</body>

@@ -7,8 +7,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require ('purifycss-webpack-plugin');
 
 const PATHS = {
-	app: path.join(__dirname, 'app'), 
-	style: path.join(__dirname, 'app', 'main.css'),
+	src: path.join(__dirname, 'src'), 
+	style: path.join(__dirname, 'src', 'main.css'),
 	build: path.join(__dirname, 'build')
 };
 
@@ -16,7 +16,7 @@ const pkg = require('./package.json');
 
 const config = {
 	entry: {
-		app: PATHS.app, 
+		src: PATHS.src, 
 		style: PATHS.style,
 		vendor: Object.keys(pkg.dependencies)
 	}, 
@@ -45,7 +45,7 @@ const config = {
 		new ExtractTextPlugin('[name].[chunkhash].css'), 
 		new CopyWebpackPlugin(
 			[{
-				from: './app/RPGdiceHangoutExtension.xml'
+				from: './src/RPGdiceHangoutExtension.xml'
 			}]
 		), 
 		new CleanWebpackPlugin([PATHS.build], {
@@ -53,7 +53,7 @@ const config = {
 		}), 
 		new PurifyCSSPlugin({
 			basePath: process.cwd(),
-			paths: [PATHS.app]
+			paths: [PATHS.src]
 		})
 	],
 	module: {
@@ -61,19 +61,19 @@ const config = {
 			{
 				test: /\.jsx?$/, 
 				loaders: ['eslint'], 
-				include: PATHS.app
+				include: PATHS.src
 			}
 		], 
 		loaders: [
 			{
 				test: /\.css$/, 
 				loader: ExtractTextPlugin.extract('style', 'css'), 
-				include: PATHS.app
+				include: PATHS.src
 			}, 
 			{
 				test: /\.jsx?$/,
 				loaders: ['babel?cacheDirectory'], 
-				include: PATHS.app
+				include: PATHS.src
 			}
 		]
 	}
